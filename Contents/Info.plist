@@ -23,8 +23,8 @@
 	<key>DefaultFontFamily</key>
 	<string>Menlo</string>
 	<key>DefaultFontSize</key>
-	<integer>12</integer>
+	<integer>18</integer>
 	<key>DefaultVariant</key>
-	<string>Dark</string>
+	<string>DarkTimestampFirst</string>
 </dict>
 </plist>
