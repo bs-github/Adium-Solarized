@@ -1,0 +1,89 @@
+body {
+    background-color: #002b36;
+    color: #93a1a1;
+}
+
+ /******* SOME TOPIC STUFF *******/
+#topic, .history {
+    color: rgba(88,110,117,.7);
+    font-size: 100%;
+}
+
+#wrap {
+    background-color: rgba(0,43,54,.95);
+    border-bottom: 1px solid rgba(88,110,117,.6);
+    box-shadow: 0 1px 2px rgba(30,30,30,.7);
+}
+ /******* END TOPIC STUFF *******/
+
+#insert,
+.message,
+.status,
+.event {
+  clear: both;
+  padding: 2px 0px;
+}
+
+.event {
+  color: #586e75;
+  font-style: normal;
+}
+
+.time {
+    color: #657b83;
+    margin: 3px -4.5px auto 0px;
+    float: none;
+}
+
+.mention {
+    background-color: rgba(211,54,130, 0.15);
+    border-top: 1px dashed rgba(211,54,130, 0.8);
+    border-bottom: 1px dashed rgba(211,54,130, 0.8);
+
+    /*
+    border-top: 1px solid rgba(131,148,150,.8);
+    border-bottom: 1px solid rgba(131,148,150,.8);
+    */
+}
+
+.andyet .mention,
+.andyet .status {
+    background-color: #073642;
+}
+
+.status {
+    font-style: normal;
+  }
+
+
+.status * {
+    color: #657b83;
+}
+
+.history {
+    background-color: rgba(7,54,66,.45);
+    color: rgba(88,110,117,.6);
+}
+
+.history .sender {
+    color: rgba(88,110,117,.75);
+}
+
+.history + :not(.history) {
+    border-top: 1px dashed rgba(42, 161, 152, 1);
+    border-top: 1px dashed rgba(181, 137, 0, 1);
+}
+
+.history.mention {
+    color: rgba(88,110,117,.95);
+    border-top: 1px dashed rgba(211,54,130, 0.8);
+    border-bottom: 1px dashed rgba(211,54,130, 0.8);
+}
+
+a {
+    color: #268bd2;
+}
+
+.firstFocus {
+    border-top-color: #cc0;
+}
