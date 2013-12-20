@@ -1,3 +1,25 @@
+/*
+
+SOLARIZED HEX     RGB
+--------- ------- -----------
+base03    #002b36   0  43  54
+base02    #073642   7  54  66
+base01    #586e75  88 110 117
+base00    #657b83 101 123 131
+base0     #839496 131 148 150
+base1     #93a1a1 147 161 161
+base2     #eee8d5 238 232 213
+base3     #fdf6e3 253 246 227
+yellow    #b58900 181 137   0
+orange    #cb4b16 203  75  22
+red       #dc322f 220  50  47
+magenta   #d33682 211  54 130
+violet    #6c71c4 108 113 196
+blue      #268bd2  38 139 210
+cyan      #2aa198  42 161 152
+green     #859900 133 153   0
+
+ */
 body {
     background-color: #002b36;
     color: #93a1a1;
@@ -5,14 +27,14 @@ body {
 
  /******* SOME TOPIC STUFF *******/
 #topic, .history {
-    color: rgba(88,110,117,.7);
+    color: #657b83;
     font-size: 100%;
 }
 
 #wrap {
-    background-color: rgba(0,43,54,.95);
+    background-color: #002b36;
     border-bottom: 1px solid rgba(88,110,117,.6);
-    box-shadow: 0 1px 2px rgba(30,30,30,.7);
+    border-bottom: 1px solid #657b83;
 }
  /******* END TOPIC STUFF *******/
 
@@ -24,9 +46,31 @@ body {
   padding: 2px 0px;
 }
 
+.action,
+.status,
 .event {
   color: #586e75;
   font-style: normal;
+  font-size: 100%;
+}
+
+.action {
+  color: rgba(147, 161, 161, 0.8);
+}
+
+.action .sender:before,
+.action .themessage:after {
+  content: "*";
+  white-space: nowrap;
+  font-style: italic;
+}
+
+.action .sender:before {
+  margin-right: 8px;
+}
+
+.action .themessage:after {
+  margin-left: 8px;
 }
 
 .time {
@@ -39,11 +83,6 @@ body {
     background-color: rgba(211,54,130, 0.15);
     border-top: 1px dashed rgba(211,54,130, 0.8);
     border-bottom: 1px dashed rgba(211,54,130, 0.8);
-
-    /*
-    border-top: 1px solid rgba(131,148,150,.8);
-    border-bottom: 1px solid rgba(131,148,150,.8);
-    */
 }
 
 .andyet .mention,
@@ -53,7 +92,7 @@ body {
 
 .status {
     font-style: normal;
-  }
+}
 
 
 .status * {
@@ -62,7 +101,7 @@ body {
 
 .history {
     background-color: rgba(7,54,66,.45);
-    color: rgba(88,110,117,.6);
+    opacity: 0.6;
 }
 
 .history .sender {
@@ -70,8 +109,7 @@ body {
 }
 
 .history + :not(.history) {
-    border-top: 1px dashed rgba(42, 161, 152, 1);
-    border-top: 1px dashed rgba(181, 137, 0, 1);
+    border-top: 1px dashed #b58900;
 }
 
 .history.mention {
@@ -85,5 +123,19 @@ a {
 }
 
 .firstFocus {
-    border-top-color: #cc0;
+  border-top: none;
+  background-color: rgba(7, 54, 66, 0.4)
+}
+
+span.marker {
+  display: none;
+}
+
+div.firstFocus {
+  border-top: none;
+}
+
+div.firstFocus span.marker {
+  display: block;
+  font-size: 200%;
 }
